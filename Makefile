@@ -6,13 +6,13 @@
 #    By: alejandg <alejandg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 12:34:11 by alejandg          #+#    #+#              #
-#    Updated: 2022/09/29 12:51:09 by alejandg         ###   ########.fr        #
+#    Updated: 2022/09/29 16:56:29 by alejandg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlcpy.c ft_strlen.c ft_strchr.c ft_strlcat.c ft_strrchr.c ft_tolower.c ft_toupper.c ft_strnstr.c ft_strncmp.c ft_atoi.c
+SRCS = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlcpy.c ft_strlen.c ft_strchr.c ft_strlcat.c ft_strrchr.c ft_tolower.c ft_toupper.c ft_strnstr.c ft_strncmp.c ft_atoi.c ft_memset.c ft_bzero.c ft_memcpy.c
 
 OBJS = ${SRCS:.c=.o}
 

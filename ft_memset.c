@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alejandg <alejandg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 12:22:14 by alejandg          #+#    #+#             */
-/*   Updated: 2022/09/29 17:32:50 by alejandg         ###   ########.fr       */
+/*   Created: 2022/09/29 16:21:17 by alejandg          #+#    #+#             */
+/*   Updated: 2022/09/29 16:39:43 by alejandg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	char	*s;
+	size_t	i;
+	char	*ss;
 
-	s = (char *)str;
-	while (*s != c)
+i = 0;
+ss = (char *)s;
+	while (i < n)
 	{
-		if (*s == '\0')
-		{
-			return (NULL);
-		}
-		s++;
+		ss[i] = c;
+		i++;
 	}
-	return (s);
+	return ((void *)ss);
 }
 
-// int main()
+// int main ()
 // {
-// 	printf("%s", ft_strchr("amigo mio te quiero mucho", 'i'));
+// char s[10];
+
+// 	printf("%s", ft_memset(s, 'a', 5));
 // }

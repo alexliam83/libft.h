@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alejandg <alejandg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 12:22:14 by alejandg          #+#    #+#             */
-/*   Updated: 2022/09/29 17:32:50 by alejandg         ###   ########.fr       */
+/*   Created: 2022/09/29 16:42:10 by alejandg          #+#    #+#             */
+/*   Updated: 2022/09/29 17:00:56 by alejandg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strchr(const char *str, int c)
+void	ft_bzero(void *s, size_t n)
+
 {
-	char	*s;
+	size_t	i;
+	char	*ss;
 
-	s = (char *)str;
-	while (*s != c)
+i = 0;
+ss = (char *)s;
+	while (i < n)
 	{
-		if (*s == '\0')
-		{
-			return (NULL);
-		}
-		s++;
+		ss[i] = '\0';
+		i++;
 	}
-	return (s);
 }
-
-// int main()
-// {
-// 	printf("%s", ft_strchr("amigo mio te quiero mucho", 'i'));
-// }

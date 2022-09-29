@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alejandg <alejandg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 12:22:14 by alejandg          #+#    #+#             */
-/*   Updated: 2022/09/29 17:32:50 by alejandg         ###   ########.fr       */
+/*   Created: 2022/09/29 16:49:32 by alejandg          #+#    #+#             */
+/*   Updated: 2022/09/29 17:15:45 by alejandg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+
 {
+	size_t	i;
 	char	*s;
+	char	*ss;
 
-	s = (char *)str;
-	while (*s != c)
+	i = 0;
+	s = (char *)dest;
+	ss = (char *)src;
+	if (((char)dest) == '\0' && ((char)src) == '\0')
+		return (dest);
+	while (i < n)
 	{
-		if (*s == '\0')
-		{
-			return (NULL);
-		}
-		s++;
+			s[i] = ss[i];
+			i++;
 	}
-	return (s);
+	dest = (void *restrict)s;
+	return (dest);
 }
-
-// int main()
-// {
-// 	printf("%s", ft_strchr("amigo mio te quiero mucho", 'i'));
-// }
