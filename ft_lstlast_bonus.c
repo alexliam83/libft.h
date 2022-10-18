@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alejandg <alejandg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 12:22:14 by alejandg          #+#    #+#             */
-/*   Updated: 2022/10/07 22:49:28 by alejandg         ###   ########.fr       */
+/*   Created: 2022/10/10 10:37:51 by alejandg          #+#    #+#             */
+/*   Updated: 2022/10/10 11:01:41 by alejandg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	char	*s;
+	t_list	*lastone;
 
-	s = (char *)str;
-	while ((unsigned char)*s != (unsigned char)c)
-	{
-		if (*s == 0)
-		{
-			return (0);
-		}
-		s++;
-	}
-	return (s);
+	lastone = lst;
+	if (lastone == NULL)
+		return (NULL);
+	while (lastone->next != NULL)
+		lastone = lastone->next;
+	return (lastone);
 }

@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alejandg <alejandg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 12:22:14 by alejandg          #+#    #+#             */
-/*   Updated: 2022/10/07 22:49:28 by alejandg         ###   ########.fr       */
+/*   Created: 2022/10/01 13:12:24 by alejandg          #+#    #+#             */
+/*   Updated: 2022/10/01 15:37:49 by alejandg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strdup(const char *s)
 {
-	char	*s;
+	char	*str;
 
-	s = (char *)str;
-	while ((unsigned char)*s != (unsigned char)c)
-	{
-		if (*s == 0)
-		{
-			return (0);
-		}
-		s++;
-	}
-	return (s);
+str = malloc((ft_strlen((char *)s) + 1) * sizeof(char));
+	if (str == NULL)
+		return (0);
+	ft_memcpy((void *)str, (void *)s, ft_strlen((char *)s));
+	str[ft_strlen((char *)s)] = '\0';
+	return ((char *)str);
 }

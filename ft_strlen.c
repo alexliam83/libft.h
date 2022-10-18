@@ -6,13 +6,13 @@
 /*   By: alejandg <alejandg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:29:08 by alejandg          #+#    #+#             */
-/*   Updated: 2022/09/26 10:53:54 by alejandg         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:56:49 by alejandg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	num;
 
